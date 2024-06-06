@@ -15,13 +15,9 @@ COMMAND = ""
 # Open Json file with hosts, and make it a list 
 with open(JSON_FILE) as dev_file:
         devices = json.load(dev_file)
-
-
 # Error messages
 netmiko_exceptions = (netmiko.ssh_exception.NetMikoTimeoutException,
                       netmiko.ssh_exception.NetMikoAuthenticationException)
-
-
 
 for device in devices:
     try:
